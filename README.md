@@ -10,5 +10,19 @@ El objetivo de este trabajo es analizar cuáles de estas variables climáticas h
 https://www.google.com/url?q=https%3A%2F%2Fwww.kaggle.com%2Fdatasets%2Fatharvasoundankar%2Fshifting-seas-ocean-climate-and-marine-life-dataset
 
 
-Análisis Exploratorio (analisis_exploratorio.ipynb)
+# Análisis Exploratorio (analisis_exploratorio.ipynb)
 Este archivo nos da un primer vistazo sobre la información que brinda cada columna y algunas relaciones entre sí. Se trabaja en corregir valores faltantes y en tratar los outliers.
+
+
+# Modelo supervisado de clasificación (clasificacion_bleaching_modelo.ipynb)
+Este archivo presenta el entrenamiento de modelos de aprendizaje supervisado para predecir la gravedad del blanqueamiento de coral en función de variables ambientales.
+Se evaluaron cuatro algoritmos de clasificación:
+ - Random Forest
+ - Árbol de Decisión
+ - k-Nearest Neighbors (kNN)
+ - Regresión Logística
+
+El proceso se desarrolló en tres etapas:
+  1) Entrenamiento inicial (“en crudo”): sin optimización de parámetros ni técnicas específicas de validación.
+  2) Validación cruzada (Stratified K-Fold): para obtener métricas más robustas, dada la escasa cantidad de datos y el desbalance de clases.
+  3) Optimización de hiperparámetros (Grid Search): se ajustaron los parámetros de cada modelo para mejorar su rendimiento predictivo.
